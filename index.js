@@ -19,19 +19,12 @@ function increaseRankBy(n) {
 }
 
 function deepestChild () {
-  var deepElement = document.querySelectorAll('div#grand-node');
-  var currentNode = ""
-  while (deepElement[0].firstChild {
-    if(deepElement[0].childNodes.length = 1) {
-      return deepElement[0].children[0]
-    } // first if statement end
-    if (deepElement[0].childNodes.length > 1) {
-      for (let i = 0; i < deepElement.length; i++) {
-          currentNode.push(deepElement[i].children[0])
-      }
-
-    } // second if statement end
-
+  var deepElement = document.getElementById('grand-node');
+  var nextNode = deepElement.children[0];
+  var currentNode;
+  while (nextNode) {
+      currentNode = nextNode;
+      nextNode = nextNode.children[0];
   } //while loop end
-
+return currentNode;
 } // function end
